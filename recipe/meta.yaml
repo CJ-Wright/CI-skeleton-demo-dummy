@@ -31,12 +31,14 @@ requirements:
   build:
     # If your project compiles code (such as a C extension) then add the required
     # compilers as separate entries here. Compilers are named 'c', 'cxx' and 'fortran'.
-    - {{ compiler('c') }}
+#    - {{ compiler('c') }}
   host:
     - python
     - pip
   run:
     - python
+    - gdal
+    - scikit-learn
 
 test:
   # Some packages might need a `test/commands` key to check CLI.
@@ -45,7 +47,6 @@ test:
     - ci_skeleton_demo_dummy
   # Run your test commands here
   commands:
-    - ci-skeleton-demo-dummy --help
     - pytest
   # declare any test-only requirements here
   requires:

@@ -6,7 +6,7 @@ def main():
     skw = dict(
         name="ci-skeleton-demo-dummy",
         version='0.0.0',
-        description="A dummy package for conda-smithy CI skeleton"
+        description="A dummy package for conda-smithy CI skeleton",
         author="CJ Wright",
         packages=["ci-skeleton-demo-dummy"],
     )

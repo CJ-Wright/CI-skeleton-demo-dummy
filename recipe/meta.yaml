@@ -1,6 +1,7 @@
 {% set name = "ci-skeleton-demo-dummy" %}
 {% set version = environ.get('GIT_DESCRIBE_TAG', 'untagged')|string|replace('-','_') %}
-{% raw %}{% set build_number = {{ environ.get('GIT_DESCRIBE_NUMBER', '0') }} %}
+{% set build_number = environ.get('GIT_DESCRIBE_NUMBER', '0') %}
+
 
 package:
   name: {{ name|lower }}
@@ -17,7 +18,7 @@ build:
   # for more details.
   # noarch: python
 
-  number: {{ build_number}}
+  number: {{ build_number }}
   string: {{ [build_number, ('h' + PKG_HASH), environ.get('GIT_DESCRIBE_HASH', '')]|join('_') }}
 
   # If the installation is complex, or different between Unix and Windows,

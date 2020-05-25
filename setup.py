@@ -8,7 +8,7 @@ def main():
         version='0.0.0',
         description="A dummy package for conda-smithy CI skeleton",
         author="CJ Wright",
-        packages=["ci-skeleton-demo-dummy"],
+        packages=["ci_skeleton_demo_dummy"],
     )
     setup(**skw)
 
